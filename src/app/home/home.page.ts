@@ -9,4 +9,14 @@ export class HomePage {
 
   constructor() {}
 
+  onClickLoginBtn() {
+
+  }
+  
+  onClickRegisterBtn() {
+    
+  }
+
 }
+
+

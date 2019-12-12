@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registeration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid >
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-sm="12" size-lg="12">
+        <ion-card class="ion-padding">
+          <ion-label>All fields are mandatory !</ion-label>
+        <form>
+          <ion-item class="ion-no-padding ion-no-margin">
+            <ion-label position="floating">Fiest Name:</ion-label>
+            <ion-input type="text" name="firstName"></ion-input>
+          </ion-item>
+          <ion-item class="ion-no-padding ion-no-margin">
+            <ion-label position="floating">Last Name:</ion-label>
+            <ion-input type="text" name="lastName"></ion-input>
+          </ion-item>
+          <ion-item class="ion-no-padding ion-no-margin">
+            <ion-label position="floating">Email Id:</ion-label>
+            <ion-input type="email" name="emailId"></ion-input>
+          </ion-item>
+          <ion-item class="ion-no-padding ion-no-margin">
+            <ion-label position="floating">Phone Number</ion-label>
+            <ion-input type="tel" name="phoneNumber"></ion-input>
+          </ion-item>
+          <ion-item class="ion-no-padding ion-no-margin">
+            <ion-label>State:</ion-label>
+            <ion-select placeholder="Select State">
+              <ion-select-option value="f">Bihar</ion-select-option>
+              <ion-select-option value="m">Karnatka</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item class="ion-no-padding ion-no-margin">
+            <ion-label position="floating">City:</ion-label>
+            <ion-input type="text" name="city"></ion-input>
+          </ion-item>
+          <ion-item class="ion-no-padding ion-no-margin">
+            <ion-label>Account/Pharma Name:</ion-label>
+            <ion-select placeholder="Pharma Name">
+              <ion-select-option value="f">Cipla</ion-select-option>
+              <ion-select-option value="m">Sun Pharma</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item class="ion-no-padding ion-no-margin">
+            <ion-label>Role:</ion-label>
+            <ion-select placeholder="Role">
+              <ion-select-option value="f">Marketing</ion-select-option>
+              <ion-select-option value="m">Manager</ion-select-option>
+              <ion-select-option value="m">Requester</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item class="ion-no-padding ion-no-margin">
+            <ion-label>Camp Approved By:</ion-label>
+            <ion-select placeholder="Camp Approved By">
+              <ion-select-option value="f">Himanshu Shekhar</ion-select-option>
+              <ion-select-option value="m">Hari Krishna</ion-select-option>
+              <ion-select-option value="m">Sarij</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item class="ion-no-padding ion-no-margin">
+            <ion-label position="floating">Password:</ion-label>
+            <ion-input type="password" name="password"></ion-input>
+          </ion-item>
+
+          <ion-item class="ion-no-padding ion-no-margin">
+            <ion-label position="floating">Confirm Password:</ion-label>
+            <ion-input type="password" name="confirmPassword"></ion-input>
+          </ion-item>
+          <ion-row >
+              <ion-col class="ion-text-center ion-padding-top">
+                  <ion-button color="zeisscolor">Register</ion-button>
+              </ion-col>
+                
+            </ion-row>
+        </form>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+</ion-content>

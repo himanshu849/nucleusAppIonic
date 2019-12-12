@@ -1,3 +1,50 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="myMenu" type="overlay" >
+    <ion-header >
+      <ion-toolbar color="zeisscolor">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-row>
+          <ion-col class="ion-text-center">
+            <ion-item lines="none" style="padding-left: 35%;">
+              <ion-thumbnail >
+                <img 
+                  src="../assets/img/dp.png"
+                />
+              </ion-thumbnail>
+              
+              
+            </ion-item>
+            <div>
+                <p class="no-margin">Field Engineer</p>
+                <p class="no-margin">Himanshu Shekhar</p>
+                <p class="no-margin">eeehimanshu22@gmail.com</p>
+            </div>
+            
+          </ion-col>
+        </ion-row>
+        <ion-item></ion-item>
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+          <ion-item
+            lines="none"
+            [routerDirection]="'root'"
+            [routerLink]="[p.url]"
+          >
+            <ion-icon
+              slot="start"
+              color="zeisscolor"
+              [name]="p.icon"
+            ></ion-icon>
+            <ion-label>
+              {{ p.title }}
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
 </ion-app>

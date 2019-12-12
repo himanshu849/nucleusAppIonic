@@ -1,0 +1,52 @@
+<ion-grid class="ion-no-padding ion-no-margin">
+  <ion-content>
+    <ion-row class="ion-justify-content-center ion-align-items-center" style="height: 100%;">
+      <ion-col size-sm="12" size-lg="4">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle class="ion-text-center" color="zeisscolor">
+              <h4>Login</h4>
+            </ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <form #loginForm="ngForm" (ngSubmit)="(loginForm)">
+              <ion-item class="ion-no-padding ion-no-margin">
+                <ion-label position="floating" name="userEmailId">Email Id:</ion-label>
+                <ion-input type="email" name="email" ngModel #emailCtrl="ngModel" required email></ion-input>
+              </ion-item>
+              <ion-item lines="none" class="ion-no-padding">
+                <ion-label class="ion-no-padding"  class="error-font-style" *ngIf="!emailCtrl.valid && emailCtrl.touched">Email id is not valid.</ion-label>
+              </ion-item>
+
+              <ion-item class="ion-no-margin ion-no-padding">
+                <ion-label position="floating" name="userPassword">Password:</ion-label>
+                <ion-input type="password" name="password" #passwordCtrl="ngModel" ngModel required minlength="6"></ion-input>
+              </ion-item>
+              <ion-item lines="none" class="ion-no-padding">
+                  <ion-label class="ion-no-padding" class="error-font-style" *ngIf="!passwordCtrl.valid && passwordCtrl.touched">Password is required minimum five character.</ion-label>
+              </ion-item>
+
+              <ion-row>
+                <ion-col class="ion-text-right">
+                  <ion-label color="zeisscolor" class="forget-password">Forget Password !</ion-label>
+                </ion-col>
+              </ion-row>
+              <ion-row class="ion-margin-top">
+                <ion-col class="ion-margin-top" class="ion-text-center">
+                  <ion-button type="submit" (click)="onClickLogin(loginForm)" [routerLink]="['/camp']"
+                    routerLinkActive="router-link-active" color="zeisscolor" [disabled]="!loginForm.valid">Login</ion-button>
+                </ion-col>
+              </ion-row>
+            </form>
+
+            <ion-row class="ion-margin-top">
+              <ion-col class="ion-text-center">
+                <ion-label color="zeisscolor" class="new-user">New User ? Please Register here !</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-content>
+</ion-grid>

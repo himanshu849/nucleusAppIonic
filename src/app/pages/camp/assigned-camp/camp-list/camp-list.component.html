@@ -1,0 +1,65 @@
+<ion-content fullscreen>
+  <ion-list>
+    <ion-item-sliding class="ion-no-padding ion-no-margin" (click)="onCLickCampList('A001')"
+      [routerLink]="['/camp-tabs']" routerLinkActive="router-link-active">
+      <ion-item>
+        <ion-grid class="ion-no-padding ion-no-margin ion-padding-top ion-padding-bottom">
+          <ion-row>
+            <ion-col size="4" class="camp-list-header">Camp Id:</ion-col>
+            <ion-col size="8" class="camp-list-value">A001</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4" class="camp-list-header">Pharmacy:</ion-col>
+            <ion-col size="8" class="camp-list-value">Sun</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4" class="camp-list-header" >Date & Time:</ion-col>
+            <ion-col size="8" class="camp-list-value">March 26, 2019 11:30 AM</ion-col>
+          </ion-row>
+          <!-- <ion-row>
+            <ion-col size="4" class="camp-list-header">Doctor Name:</ion-col>
+            <ion-col size="8" class="camp-list-value">Dr Himanshu Shekhar</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4" class="camp-list-header">Location:</ion-col>
+            <ion-col size="8" class="camp-list-value">Bangalore, Karnataka</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4" class="camp-list-header">Camp Address:</ion-col>
+            <ion-col size="8" class="camp-list-value">Mallikarjun Building, 4th cross, marathalli, Bangalore-560037</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4" class="camp-list-header">Customer Executive:</ion-col>
+            <ion-col size="8" class="camp-list-value">Mr. Saurav Bakhsi <br> +918496051459</ion-col>
+          </ion-row> -->
+        </ion-grid>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item-sliding class="ion-no-padding ion-no-margin" (click)="onCLickCampList('A002')">
+      <ion-item>
+        <ion-grid class="ion-no-padding ion-no-margin ion-padding-top ion-padding-bottom">
+          <ion-row>
+            <ion-col size="4" style="font-weight: bold;">Camp Id:</ion-col>
+            <ion-col size="8">A002</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col style="font-weight: bold;" size="4">Pharmacy:</ion-col>
+            <ion-col size="8">Paracitamol Pvt Ltd.</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col style="font-weight: bold;" size="4">Date & Time:</ion-col>
+            <ion-col size="8">Jan 14, 2020 02:45 PM</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
